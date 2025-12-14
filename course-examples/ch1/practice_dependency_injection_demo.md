@@ -13,30 +13,44 @@
 
 ## 📋 사전 준비
 
-### 1. 프로젝트 구조 확인
+### 1. 실습 파일 다운로드
 
+GitHub 저장소에서 실습 파일을 다운로드하세요:
+
+**📥 다운로드 링크**:
+- [dependency_injection_demo.py](https://github.com/nfbs2000/vibe-with-kimi-cli-inflearn/blob/main/course-examples/ch1/dependency_injection_demo.py)
+
+**방법 1: 직접 다운로드**
 ```bash
-# 현재 위치 확인
-pwd
-# /path/to/vibe-with-kimi-cli-main
-
-# 필요한 디렉터리 확인
-ls -la .claude/skills/course-builder/output/inflearn_sections/ch1/
-# dependency_injection_demo.py 파일이 존재해야 함
+# 파일을 우클릭 → "다른 이름으로 저장"
+# 또는 Raw 버튼 클릭 → Ctrl+S (Cmd+S)
 ```
 
-### 2. 데모 스크립트 위치 확인
-
+**방법 2: wget 사용**
 ```bash
-ls -la .claude/skills/course-builder/output/inflearn_sections/ch1/dependency_injection_demo.py
-# 파일이 존재하는지 확인
+wget https://raw.githubusercontent.com/nfbs2000/vibe-with-kimi-cli-inflearn/main/course-examples/ch1/dependency_injection_demo.py
 ```
 
-### 3. Python 환경 확인
+**방법 3: curl 사용**
+```bash
+curl -O https://raw.githubusercontent.com/nfbs2000/vibe-with-kimi-cli-inflearn/main/course-examples/ch1/dependency_injection_demo.py
+```
+
+### 2. Python 환경 확인
 
 ```bash
 python3 --version
 # Python 3.8 이상이어야 함 (type hints, dataclass 지원)
+```
+
+### 3. 파일 실행 준비
+
+```bash
+# 다운로드한 디렉토리로 이동
+cd ~/Downloads  # 또는 파일을 저장한 위치
+
+# 파일 확인
+ls -la dependency_injection_demo.py
 ```
 
 ---
@@ -49,7 +63,7 @@ python3 --version
 ### 실행 명령
 
 ```bash
-cd .claude/skills/course-builder/output/inflearn_sections/ch1
+# 파일이 있는 디렉토리에서 실행
 python3 dependency_injection_demo.py
 ```
 
@@ -561,12 +575,12 @@ container.register(123)       # int 타입
 
 ## 🔗 참고 자료
 
-### 관련 파일
-- `src/kimi_cli/agent.py:247-350` - load_agent() 함수 전체
-- `src/kimi_cli/config.py` - UnifiedConfig 클래스
-- `src/kimi_cli/runtime.py` - AgentRuntime 클래스
-- `src/kimi_cli/approval.py` - Approval 클래스
-- `src/kimi_cli/tools/` - 다양한 도구 구현 예시
+### 관련 파일 (GitHub)
+- [agent.py:247-350](https://github.com/nfbs2000/vibe-with-kimi-cli-inflearn/blob/main/src/kimi_cli/agent.py#L247-L350) - load_agent() 함수 전체
+- [config.py](https://github.com/nfbs2000/vibe-with-kimi-cli-inflearn/blob/main/src/kimi_cli/config.py) - UnifiedConfig 클래스
+- [runtime.py](https://github.com/nfbs2000/vibe-with-kimi-cli-inflearn/blob/main/src/kimi_cli/runtime.py) - AgentRuntime 클래스
+- [approval.py](https://github.com/nfbs2000/vibe-with-kimi-cli-inflearn/blob/main/src/kimi_cli/approval.py) - Approval 클래스
+- [tools/](https://github.com/nfbs2000/vibe-with-kimi-cli-inflearn/tree/main/src/kimi_cli/tools) - 다양한 도구 구현 예시
 
 ### Python 문서
 - [inspect 모듈](https://docs.python.org/3/library/inspect.html)
